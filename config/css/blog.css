@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8fafc;
+}
+
+.header-gradient {
+  background: linear-gradient(135deg, #004a77 0%, #00558a 50%, #006699 100%);
+}
+
+.logo-shadow {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.event-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.media-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.action-button {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+}
+
+.add-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(37, 99, 235, 0.3);
+}
+
+.edit-button {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.delete-button {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.card-content {
+  position: relative;
+}
+
+.card-content-scrollable {
+height: 150px;  /* Hauteur fixe pour la zone de contenu */
+overflow-y: auto;  /* Permet le défilement vertical */
+padding-right: 5px;  /* Espace pour la barre de défilement */
+}
+
+/* Style pour la barre de défilement */
+.card-content-scrollable::-webkit-scrollbar {
+width: 5px;
+}
+
+.card-content-scrollable::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 10px;
+}
+
+.card-content-scrollable::-webkit-scrollbar-thumb {
+background: #c5c5c5;
+border-radius: 10px;
+}
+
+.card-content-scrollable::-webkit-scrollbar-thumb:hover {
+background: #a0a0a0;
+}
+
+/* Suppression de la limitation à 3 lignes */
+.truncate-3-lines {
+display: block;
+overflow: visible;
+-webkit-line-clamp: unset;
+-webkit-box-orient: unset;
+}
+
+.empty-state {
+  background-color: white;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <title>ONG Notre Dame des Victoires</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .carousel-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class=" text-gray-800">
+  <!-- HEADER -->
+  <header class="navbar fixed top-0 w-full p-2 z-20 ">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="./asset/logo-NDV.png" alt="Logo ONG" class="bg-white h-20 mr-3 rounded-full">
+      </div>
+      <div class="hidden sm:block">
+        <a href="contact.html"
+          class="bg-[#00558a] hover:border border-[#00558a] hover:bg-blue-200 transition hover:text-[#00558a] text-white px-4 py-2 rounded">Nous
+          Contacter</a>
+      </div>
+      <div class="sm:hidden">
+        <a href="contact.html" title="contact" class="flex items-center text-[#00558a] p-6">
+          <i class="fa-solid fa-square-phone text-4xl"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <!-- HERO SECTION -->
+  <main class="">
+    <section class="relative w-full">
+      <!-- Fond sombre transparent -->
+      <div class="carousel-overlay">
+      </div>
+      <!-- Carrousel -->
+      <div class="splide" aria-label="Splide Basic HTML Example">
+        <!-- Texte de bienvenue -->
+        <div class="w-full h-full absolute flex items-center justify-center text-white z-10">
+          <div class="text-center sm:text-left h-auto py-8 px-4">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold">Bienvenue à l'ONG Notre Dame des Victoires</h2>
+            <p class="mt-4 text-base sm:text-lg md:text-xl">
+              Engagés à offrir une éducation inclusive, nous accompagnons les jeunes et les communautés vers un avenir
+              éclairé et responsable.
+            </p>
+            <!-- Boutons des réseaux sociaux -->
+            <div class="flex justify-center space-x-4 mt-6">
+              <a href="https://www.facebook.com/profile.php?id=100079511236105" title="social"
+                class="bg-[#00558a] p-2 rounded-full text-white shadow hover:bg-white hover:text-[#00558a] transition duration-300">
+                <i class="fab fa-facebook-f "></i>
+              </a>
+              <a href="https://wa.me/229 97 32 85 19" title="social"
+                class="bg-green-500 p-2 rounded-full text-white shadow hover:bg-white hover:text-green-500 transition duration-300">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="mailto:Ongnotredamedesvictoires@gmail.com" title="social"
+                class="bg-yellow-500 p-2 rounded-full text-white shadow hover:bg-white hover:text-yellow-500 transition duration-300">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="#" title="social"
+                class="bg-blue-600 p-2 rounded-full text-white shadow hover:bg-white hover:text-blue-600 transition duration-300">
+                <i class="fab fa-twitter "></i>
+              </a>
+              <a href="#" title="social"
+                class="bg-red-600 p-2 rounded-full text-white shadow hover:bg-white hover:text-red-600 transition duration-300">
+                <i class="fab fa-youtube "></i>
+              </a>
+              <a href="#" title="social"
+                class="bg-pink-600 p-2 rounded-full text-white shadow hover:bg-white hover:text-pink-600 transition duration-300">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <!-- Boutons "Blog" et "Nous Soutenir" -->
+            <div class="flex justify-center mt-6 space-x-4">
+              <a href="./config/publicblog.php"
+                class="bg-white text-[#00558a] font-bold py-2 px-4 rounded transition duration-300 hover:bg-[#00558a] hover:text-white">Blog</a>
+              <a href="contact.html"
+                class="bg-[#00558a] text-white font-bold py-2 px-4 rounded transition duration-300 hover:bg-blue-600">Nous
+                Soutenir</a>
+            </div>
+          </div>
+        </div>
+        <div class="relative splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide"><img src="asset/1.jpg" alt="Slide 1" class="w-full h-screen object-cover"></li>
+            <li class="splide__slide"><img src="asset/5.jpg" alt="Slide 2" class="w-full h-screen object-cover"></li>
+            <li class="splide__slide"><img src="asset/3.jpg" alt="Slide 3" class="w-full h-screen object-cover"></li>
+            <li class="splide__slide"><img src="asset/4.jpg" alt="Slide 4" class="w-full h-screen object-cover"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="py-16 bg-white mt-32">
+    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+      <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+        <div class="md:5/12 lg:w-5/12">
+          <img class="rounded-md" src="./asset/ong/ab1.jpg" alt="image" loading="lazy" width="" height="">
+        </div>
+        <div class="md:7/12 lg:w-6/12">
+          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">L'ONG Notre Dame des Victoires</h2>
+          <p class="mt-6 text-gray-600">Notre Dame des Victoires est une organisation non gouvernementale dédiée à la
+            promotion de l'éducation,
+            du bien-être et de la santé des communautés. Fondée sur des valeurs de compassion, d'engagement et
+            d'inclusion, nous travaillons sans relâche pour offrir des opportunités à ceux qui en ont le plus besoin.
+          </p>
+          <p class="mt-4 text-gray-600">Ensemble, construisons un avenir basé sur l'éducation, la solidarité et le
+            développement durable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SECTIONS DE CONTENU -->
+  <div class="container m-auto py-12 text-center mt-12">
+    <h1 class="text-3xl md:text-5xl font-bold">Nos Projets</h1>
+    <h2 class="text-xl md:text-2xl text-pink-400 font-semibold mt-8"></h2>
+
+    L'ONG Notre Dame des Victoires mène des projets pour soutenir les élèves, renforcer les familles et aider les
+    enfants vulnérables, tout en promouvant l’éducation et le développement social.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 px-6">
+      <!-- Carte 1 -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <img class="rounded-lg w-full h-72 object-cover" src="./asset/ong/p2.jpg" alt="Programme d'éducation sexuelle">
+        <h3 class="text-2xl font-bold mt-6">Ateliers de sensibilisation communautaire</h3>
+        <p class="mt-4 text-lg text-gray-600">
+          Engager les communautés locales pour renforcer la compréhension et le soutien familial.
+        </p>
+        <a href="./config/publicblog.php">
+          <button class="mt-6 bg-lime-300 text-teal-900 px-4 py-2 rounded-lg hover:bg-lime-400">
+            Voir plus
+          </button>
+        </a>
+      </div>
+      <!-- Carte 2 -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <img class="rounded-lg w-full h-72 object-cover" src="./asset/ong/p3.jpg" alt="Ateliers de sensibilisation">
+        <h3 class="text-2xl font-bold mt-6">Programmes d’éducation sexuelle</h3>
+        <p class="mt-4 text-lg text-gray-600">
+          Sensibiliser les jeunes sur la santé sexuelle pour un avenir éclairé et responsable.
+        </p>
+        <a href="./config/publicblog.php">
+          <button class="mt-6 bg-lime-300 text-teal-900 px-4 py-2 rounded-lg hover:bg-lime-400">
+            Voir plus
+          </button>
+        </a>
+      </div>
+      <!-- Carte 3 -->
+      <div class="flex justify-center  sm:col-span-2 lg:col-span-1">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <img class="rounded-lg w-full h-72 object-cover" src="./asset/ong/p4.jpg" alt="Conseils et support">
+          <h3 class="text-2xl font-bold mt-6">Conseils et support individualisés</h3>
+          <p class="mt-4 text-lg text-gray-600">
+            Offrir un accompagnement personnalisé aux enfants pour résoudre des problématiques spécifiques.
+          </p>
+          <a href="./config/publicblog.php">
+            <button class="mt-6 bg-lime-300 text-teal-900 px-4 py-2 rounded-lg hover:bg-lime-400">
+              Voir plus
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="py-10 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-[#00558a] mb-4">À Propos de Nous</h2>
+      <p class="mb-6 text-sm text-gray-700 mt-12">
+        L'ONG Notre Dame des Victoires a pour mission de fournir un accompagnement éducatif, social et familial afin de
+        promouvoir le bien-être des apprenants, renforcer les liens familiaux et contribuer à une société plus juste et
+        harmonieuse.
+      </p>
+      <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
+        <div class="pl-48 lg:w-1/2 mb-6 lg:mb-0">
+          <img src="./asset/ong/ab.jpg" alt="Faites un don" class="w-96 h-1/2 rounded-lg shadow-lg">
+        </div>
+        <div class="lg:w-1/2 lg:pl-8 text-center lg:text-left">
+          <h2 class="text-xl font-bold mt-12 text-[#00558a]">La vision de l’ONG NDV : VAINCRE L’ÉCHEC SCOLAIRE</h2>
+          <p class="mb-6 text-lg text-gray-700">
+            Cette vision est née face à l’augmentation préoccupante des fléaux sociaux en milieu scolaire : grossesses
+            précoces, toxicomanie, échecs répétés sans raisons apparentes, criminalité, violences, viols et alcoolisme.
+            Ces problématiques reflètent une détérioration croissante de la vie familiale dans nos foyers.
+            En réponse, des professionnels de l’éducation ont uni leurs forces pour fonder l’ONG NDV. Leur mission est
+            de soutenir les élèves en difficulté scolaire tout en favorisant la reconstruction des liens familiaux.
+            À travers ses actions, l’ONG NDV contribue activement au développement du Bénin, en impactant positivement
+            l’éducation et les familles.
+          </p>
+          <h2 class="text-xl font-bold mb-4 text-[#00558a]">Nos objectifs :</h2>
+          <p class="mb-6 text-sm text-gray-700">
+            ✔️ Accompagner les apprenants présentant des comportements inappropriés susceptibles de nuire à leurs
+            résultats scolaires, en les aidant à retrouver un équilibre. <br>
+            ✔️ Promouvoir l’éducation à la vie familiale en organisant des séminaires pratiques sur des méthodes
+            éducatives adaptées. <br>
+            ✔️ Assister les orphelins et les enfants en situation de précarité, en leur offrant des ressources et un
+            soutien adaptés à leurs besoins. <br>
+            ✔️ Créer un centre d’éducation et de restauration familiale, où l’accent sera mis sur la réconciliation, la
+            formation et le renforcement des liens familiaux. <br>
+          </p>
+          <a href="./config/publicblog.php"
+            class="bg-[#00558a] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#004a7a] transition duration-300 inline-block">
+            Visitez notre Blog
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- SECTIONS DE CONTENU -->
+  <div class="container m-auto py-12 text-center mt-12">
+    <h1 class="text-3xl md:text-5xl text-[#00558a] font-semibold">Notre engagement </h1>
+    <h2 class="text-xl md:text-2xl text-pink-400 font-semibold mt-8">Une Conscience Éducative</h2>
+    <p class="mt-6 text-lg md:text-xl text-gray-700">
+      À travers ces actions, l’ONG NDV contribue activement au développement du Bénin, en impactant positivement non
+      seulement le système éducatif, mais également les structures familiales, bases fondamentales de toute société
+      prospère.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12 px-6">
+      <div class="bg-white rounded-lg shadow-md p-8 text-center">
+        <i class="fas fa-graduation-cap text-6xl text-teal-500"></i>
+        <h3 class="text-2xl font-bold mt-6">Soutenir les élèves en difficulté scolaire
+        </h3>
+        <p class="mt-4 text-lg text-gray-600">
+          Nous aidons les familles à recréer des relations harmonieuses grâce à des ateliers et des espaces d’écoute.
+        </p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-8 text-center">
+        <i class="fas fa-users text-6xl text-teal-500"></i>
+        <h3 class="text-2xl font-bold mt-6"> Favoriser la reconstruction des liens familiaux</h3>
+        <p class="mt-4 text-lg text-gray-600">
+          Nous accompagnons les élèves en difficulté pour les aider à surmonter leurs obstacles et réussir leur parcours
+          éducatif.
+        </p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-8 text-center">
+        <i class="fas fa-hands-helping text-6xl text-teal-500"></i>
+        <h3 class="text-2xl font-bold mt-6">Contribuer à une société plus équilibrée et harmonieuse</h3>
+        <p class="mt-4 text-lg text-gray-600">
+          Nos actions visent à bâtir une société solidaire, basée sur l’éducation et des valeurs partagées.
+        </p>
+      </div>
+    </div>
+  </div>
+  <section class="bg-gray-100 py-10 mt-10">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
+      <div class="lg:w-1/2 mb-6 lg:mb-0">
+        <img
+          src="https://img.freepik.com/free-photo/volunteers-holding-boxes-containing-donations-charity_23-2149230562.jpg?t=st=1733200764~exp=1733204364~hmac=2ac3d9e225abb04153050cb9433dd49ee380f1b878a7ace6b2f5040744740738&w=1060"
+          alt="Faites un don" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+      <div class="lg:w-1/2 lg:pl-8 text-center lg:text-left">
+        <h2 class="text-3xl font-bold mb-4 text-[#00558a]">Faites un don, changez des vies</h2>
+        <p class="mb-6 text-lg text-gray-700">
+          Votre contribution permet de soutenir nos programmes et d'apporter une aide précieuse à ceux qui en ont
+          besoin. Chaque don compte et fait une réelle différence.
+        </p>
+        <a href="contact.html"
+          class="bg-[#00558a] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#004a7a] transition duration-300 inline-block">
+          Faire un don
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-[#00558a] mt-32">
+    <div class="container px-6 py-8 mx-auto">
+      <div class="flex flex-col items-center text-center">
+        <a href="./test.html" title="logo-NDV">
+          <img class="w-auto h-32 rounded-full" src="./asset/logo-NDV-remove.jpg" alt="">
+        </a>
+        <p class=" mx-auto mt-4 text-white">
+          Nous œuvrons pour l'éducation, la santé et le bien-être des communautés les plus vulnérables, en promouvant
+          des valeurs de solidarité, de respect et d'engagement durable.
+        </p>
+        <div class="flex flex-col gap-2 mt-4 sm:flex-row sm:items-center sm:justify-center">
+          <a href="https://www.facebook.com/profile.php?id=100079511236105"><button title="facebook"
+              class="w-10 h-10 rounded-full bg-white text-2xl text-[#00558a]"><i
+                class="fab fa-facebook"></i></button></a>
+          <a href="mailto:Ongnotredamedesvictoires@gmail.com"><button title="email"
+              class="w-10 h-10 rounded-full bg-white text-2xl text-[#00558a]"><i
+                class="fa-regular fa-envelope"></i></button></a>
+          </button>
+          <a href="contact.html"><button
+              class="w-full px-5 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mx-2 sm:order-2 sm:w-auto hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+              Nous soutenir</button></a>
+        </div>
+      </div>
+      <hr class="my-10 border-gray-200" />
+      <div class="flex flex-col items-center sm:flex-row sm:justify-between">
+        <p class="text-sm text-white">© Copyright 2024. - ONG NOTRE DAME DES VICTOIRE - Tout droit reserver. <a></a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- Script Splide -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script>
+    // Initialisation du carrousel Splide
+    document.addEventListener('DOMContentLoaded', function () {
+      var splide = new Splide('.splide', {
+        type: 'loop',
+        perPage: 1,
+        pagination: true,
+        interval: 3000,
+        arrows: false,
+        autoplay: true,
+      });
+      splide.mount();
+    });
+
+    // Gestion de la transparence de la navbar
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+        navbar.classList.remove('bg-transparent');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

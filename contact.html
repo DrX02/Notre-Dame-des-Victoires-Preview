@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Contact - ONG Notre Dame des Victoires</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .contact-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .map-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    .map-responsive {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body class="text-gray-800 bg-gray-50">
+
+  <!-- HEADER -->
+  <header class="navbar fixed top-0 w-full p-2 z-20">
+    <nav class="flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="./asset/logo-NDV.png" alt="Logo ONG" class="bg-white h-20 mr-3 rounded-full">
+      </div>
+
+      <div class="hidden sm:block">
+        <a href="index.html"
+          class="bg-[#00558a] hover:border border-[#00558a] hover:bg-blue-200 transition hover:text-[#00558a] text-white px-4 py-2 rounded">
+          Accueil
+        </a>
+      </div>
+      <div class="sm:hidden">
+        <a href="index.html" title="accueil" class="flex items-center text-[#00558a] p-6">
+          <i class="fa-solid fa-home text-4xl"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative h-64 mt-20">
+    <div class="bg-[#00558a] h-full w-full flex items-center justify-center">
+      <div class="text-center text-white px-4">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4">Contactez-Nous</h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          Nous sommes à votre écoute pour toute question ou proposition de collaboration
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container mx-auto px-4 py-10">
+    <!-- COORDONNÉES DE CONTACT -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-[#00558a] text-center mb-10">Nos coordonnées</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- TÉLÉPHONE -->
+        <div class="bg-white p-8 rounded-lg shadow-md text-center contact-card">
+          <div class="w-16 h-16 bg-[#00558a] rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-phone text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#00558a] mb-4">Téléphone</h3>
+          <p class="text-gray-700 mb-4">Appelez-nous pour discuter de vos besoins ou questions</p>
+          <a href="tel:+22997328519" class="text-lg font-semibold text-[#00558a] hover:underline">+229 97 32 85 19</a>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="bg-white p-8 rounded-lg shadow-md text-center contact-card">
+          <div class="w-16 h-16 bg-[#00558a] rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-envelope text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#00558a] mb-4">Email</h3>
+          <p class="text-gray-700 mb-4">Envoyez-nous un email et nous vous répondrons rapidement</p>
+          <a href="mailto:Ongnotredamedesvictoires@gmail.com" class="text-lg font-semibold text-[#00558a] hover:underline">Ongnotredamedesvictoires@gmail.com</a>
+        </div>
+
+        <!-- ADRESSE -->
+        <div class="bg-white p-8 rounded-lg shadow-md text-center contact-card">
+          <div class="w-16 h-16 bg-[#00558a] rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#00558a] mb-4">Adresse</h3>
+          <p class="text-gray-700 mb-4">Rendez-nous visite à notre bureau</p>
+          <address class="text-lg not-italic text-[#00558a]">
+            Minonkpo 2eme Rue après Nagueze,<br>
+            7eme Maison à gauche C: 1092,<br>
+            Cotonou, Benin
+          </address>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION WHATSAPP -->
+    <section class="mb-16 bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 bg-[#25D366] p-8 text-white">
+          <h2 class="text-3xl font-bold mb-4">Contactez-nous sur WhatsApp</h2>
+          <p class="mb-6 text-lg">
+            La façon la plus rapide de nous joindre ! Envoyez-nous un message sur WhatsApp pour toute question ou demande de renseignements.
+          </p>
+          <ul class="mb-8 space-y-4">
+            <li class="flex items-center">
+              <i class="fas fa-check-circle mr-3 text-xl"></i>
+              <span>Réponse rapide garantie</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle mr-3 text-xl"></i>
+              <span>Discussion confidentielle</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check-circle mr-3 text-xl"></i>
+              <span>Disponible 7j/7</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/22997328519" target="_blank" class="inline-flex items-center bg-white text-[#25D366] font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300">
+            <i class="fab fa-whatsapp text-2xl mr-3"></i>
+            Démarrer une discussion
+          </a>
+        </div>
+        <div class="md:w-1/2 p-8 flex items-center justify-center">
+          <div class="text-center">
+            <i class="fab fa-whatsapp text-[#25D366] text-9xl mb-4"></i>
+            <p class="text-xl text-gray-600 mb-4">Scannez pour nous contacter</p>
+            <div class="bg-white p-2 inline-block rounded-lg shadow-md">
+              <!-- Remplacez ceci par un QR code réel lié à votre WhatsApp -->
+              <img src="/api/placeholder/200/200" alt="QR Code WhatsApp" class="w-48 h-48">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORAIRES & RÉSEAUX SOCIAUX -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <!-- HORAIRES -->
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-[#00558a] mb-6">Nos Horaires d'Ouverture</h3>
+        <ul class="space-y-4">
+          <li class="flex justify-between items-center pb-2 border-b border-gray-200">
+            <span class="font-medium">Lundi - Vendredi</span>
+            <span>8h00 - 17h00</span>
+          </li>
+          <li class="flex justify-between items-center pb-2 border-b border-gray-200">
+            <span class="font-medium">Samedi</span>
+            <span>9h00 - 13h00</span>
+          </li>
+          <li class="flex justify-between items-center pb-2 border-b border-gray-200">
+            <span class="font-medium">Dimanche</span>
+            <span>Fermé</span>
+          </li>
+        </ul>
+        <p class="mt-6 text-gray-600 italic">
+          Pour les urgences, vous pouvez nous contacter par téléphone ou WhatsApp en dehors des heures d'ouverture.
+        </p>
+      </div>
+
+      <!-- RÉSEAUX SOCIAUX -->
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-[#00558a] mb-6">Suivez-nous</h3>
+        <p class="mb-6 text-gray-600">
+          Restez connecté avec nous et suivez nos actualités sur les réseaux sociaux pour être informé de nos projets et événements.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <a href="https://www.facebook.com/profile.php?id=100079511236105" target="_blank" class="flex items-center bg-[#1877F2] text-white p-4 rounded-lg hover:bg-[#166FE5] transition duration-300">
+            <i class="fab fa-facebook text-xl mr-4"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="#" target="_blank" class="flex items-center bg-[#1DA1F2] text-white p-4 rounded-lg hover:bg-[#1A91DA] transition duration-300">
+            <i class="fab fa-twitter text-xl mr-4"></i>
+            <span>Twitter</span>
+          </a>
+          <a href="#" target="_blank" class="flex items-center bg-[#E4405F] text-white p-4 rounded-lg hover:bg-[#D93C50] transition duration-300">
+            <i class="fab fa-instagram text-xl mr-4"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="#" target="_blank" class="flex items-center bg-[#0A66C2] text-white p-4 rounded-lg hover:bg-[#085AA9] transition duration-300">
+            <i class="fab fa-linkedin text-xl mr-4"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCALISATION -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-[#00558a] text-center mb-10">Notre Localisation</h2>
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <div class="map-container">
+          <!-- Remplacez cette iframe par votre localisation Google Maps réelle -->
+          <iframe class="map-responsive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0515364973356!2d2.4178273!3d6.3702895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023552129745a09%3A0x9cbb0e088e5c26b7!2sOrganisation%20Non%20Gouvernementale%20Notre%20Dame%20des%20Victoires%20(EDUCATIONS%20et%20SOCIAUX)!5e0!3m2!1sfr!2sbj!4v1696789456789!5m2!1sfr!2sbj" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="p-4 text-center">
+          <a href="https://goo.gl/maps/123456789" target="_blank" class="inline-flex items-center text-[#00558a] font-medium hover:underline">
+            <i class="fas fa-directions mr-2"></i>
+            Obtenir l'itinéraire
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION FAQ -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-[#00558a] text-center mb-10">Questions Fréquentes</h2>
+      
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <!-- Question 1 -->
+        <div class="border-b border-gray-200">
+          <button class="flex justify-between items-center w-full text-left p-5 focus:outline-none">
+            <span class="font-medium text-lg text-[#00558a]">Comment puis-je devenir bénévole ?</span>
+            <i class="fas fa-chevron-down text-[#00558a]"></i>
+          </button>
+          <div class="px-5 pb-5">
+            <p class="text-gray-700">
+              Pour devenir bénévole, vous pouvez nous contacter par téléphone ou par email. Nous organisons régulièrement des séances d'information pour les personnes intéressées. Votre aide est précieuse pour notre mission !
+            </p>
+          </div>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="border-b border-gray-200">
+          <button class="flex justify-between items-center w-full text-left p-5 focus:outline-none">
+            <span class="font-medium text-lg text-[#00558a]">Comment puis-je faire un don à l'ONG ?</span>
+            <i class="fas fa-chevron-down text-[#00558a]"></i>
+          </button>
+          <div class="px-5 pb-5">
+            <p class="text-gray-700">
+              Vous pouvez faire un don par virement bancaire ou en espèces directement à notre bureau. Contactez-nous pour obtenir nos coordonnées bancaires. Un reçu vous sera délivré pour chaque don effectué.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="border-b border-gray-200">
+          <button class="flex justify-between items-center w-full text-left p-5 focus:outline-none">
+            <span class="font-medium text-lg text-[#00558a]">Quels sont les horaires des programmes éducatifs ?</span>
+            <i class="fas fa-chevron-down text-[#00558a]"></i>
+          </button>
+          <div class="px-5 pb-5">
+            <p class="text-gray-700">
+              Nos programmes éducatifs se déroulent principalement l'après-midi après les cours, de 15h à 18h du lundi au vendredi. Des sessions spéciales peuvent être organisées le samedi matin selon les besoins.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Question 4 -->
+        <div>
+          <button class="flex justify-between items-center w-full text-left p-5 focus:outline-none">
+            <span class="font-medium text-lg text-[#00558a]">Comment bénéficier de vos services d'accompagnement ?</span>
+            <i class="fas fa-chevron-down text-[#00558a]"></i>
+          </button>
+          <div class="px-5 pb-5">
+            <p class="text-gray-700">
+              Pour bénéficier de nos services d'accompagnement psychoaffectif, vous pouvez nous contacter directement ou passer par l'établissement scolaire de votre enfant si nous y intervenons déjà. Un premier entretien gratuit vous sera proposé.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPEL À L'ACTION -->
+    <section class="bg-[#00558a] text-white p-10 rounded-lg shadow-lg text-center">
+      <h2 class="text-3xl font-bold mb-6">Prêt à nous soutenir ?</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">
+        Votre soutien est crucial pour nous permettre de continuer notre mission auprès des enfants et des familles. Chaque contribution compte !
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="mailto:Ongnotredamedesvictoires@gmail.com" class="bg-white text-[#00558a] font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300">
+          Contactez-nous
+        </a>
+        <a href="#" class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-[#00558a] transition duration-300">
+          Faire un don
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#00558a] mt-16">
+    <div class="container px-6 py-8 mx-auto">
+      <div class="flex flex-col items-center text-center">
+        <a href="./index.html" title="logo-NDV">
+          <img class="w-auto h-32 rounded-full" src="./asset/logo-NDV-remove.jpg" alt="">
+        </a>
+
+        <p class="mx-auto mt-4 text-white">
+          Nous œuvrons pour l'éducation, la santé et le bien-être des communautés les plus vulnérables, en promouvant
+          des valeurs de solidarité, de respect et d'engagement durable.
+        </p>
+
+        <div class="flex flex-col gap-2 mt-4 sm:flex-row sm:items-center sm:justify-center">
+          <a href="https://www.facebook.com/profile.php?id=100079511236105"><button title="facebook"
+              class="w-10 h-10 rounded-full bg-white text-2xl text-[#00558a]"><i
+                class="fab fa-facebook"></i></button></a>
+          <a href="mailto:Ongnotredamedesvictoires@gmail.com"><button title="email"
+              class="w-10 h-10 rounded-full bg-white text-2xl text-[#00558a]"><i
+                class="fa-regular fa-envelope"></i></button></a>
+          </button>
+
+          <a href="#"><button
+              class="w-full px-5 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mx-2 sm:order-2 sm:w-auto hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+              Nous soutenir</button></a>
+        </div>
+      </div>
+
+      <hr class="my-10 border-gray-200" />
+
+      <div class="flex flex-col items-center sm:flex-row sm:justify-between">
+        <p class="text-sm text-white">© Copyright 2024. - ONG NOTRE DAME DES VICTOIRE - Tout droit reserver.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Gestion de la transparence de la navbar
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+        navbar.classList.remove('bg-transparent');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Gestion du toggle des FAQs
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        // Toggle visibility
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

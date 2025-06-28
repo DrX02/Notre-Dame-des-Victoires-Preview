@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ONG Notre Dame des Victoires - Une organisation dédiée à l'éducation, au bien-être et à la santé des communautés au Bénin">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <title>ONG Notre Dame des Victoires | Vaincre l'échec scolaire</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(0, 85, 138, 0.9);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
+
+    .carousel-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .gradient-overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    }
+
+    .social-icon:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-project {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .vision-bg {
+      background-image: url('./asset/vision-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800">
+  <!-- HEADER -->
+  <header class="navbar fixed top-0 w-full py-2 px-4 md:px-8 z-50 transition-all duration-300">
+    <nav class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="./asset/logo-NDV.png" alt="Logo ONG Notre Dame des Victoires" class="bg-white h-16 md:h-20 rounded-full shadow-md">
+        <div class="ml-3 hidden md:block">
+          <h1 class="text-lg font-bold text-white">Notre Dame des Victoires</h1>
+          <p class="text-xs text-white/80">Vaincre l'échec scolaire</p>
+        </div>
+      </div>
+
+      <!-- Navigation desktop -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#accueil" class="text-white hover:text-blue-200 transition font-medium">Accueil</a>
+        <a href="about.html" class="text-white hover:text-blue-200 transition font-medium">Qui sommes-nous</a>
+        <a href="#projets" class="text-white hover:text-blue-200 transition font-medium">Nos projets</a>
+        <a href="./config/publicblog.php" class="text-white hover:text-blue-200 transition font-medium">Blog</a>
+        <a href="contact.html" class="bg-white text-[#00558a] hover:bg-blue-50 transition px-4 py-2 rounded-lg font-semibold">Nous contacter</a>
+      </div>
+
+      <!-- Bouton mobile -->
+      <div class="block md:hidden">
+        <button id="mobile-menu-button" class="text-white p-2">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden bg-white absolute top-full left-0 right-0 shadow-lg rounded-b-lg">
+      <div class="container mx-auto py-4 px-6 flex flex-col space-y-4">
+        <a href="#accueil" class="text-[#00558a] hover:text-blue-700 transition font-medium py-2">Accueil</a>
+        <a href="#qui-sommes-nous" class="text-[#00558a] hover:text-blue-700 transition font-medium py-2">Qui sommes-nous</a>
+        <a href="#projets" class="text-[#00558a] hover:text-blue-700 transition font-medium py-2">Nos projets</a>
+        <a href="./config/publicblog.php" class="text-[#00558a] hover:text-blue-700 transition font-medium py-2">Blog</a>
+        <a href="contact.html" class="bg-[#00558a] text-white hover:bg-blue-700 transition px-4 py-2 rounded-lg font-semibold text-center">Nous contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="accueil" class="relative w-full h-screen">
+    <!-- Overlay -->
+    <div class="carousel-overlay"></div>
+
+    <!-- Carrousel -->
+    <div class="splide h-full" aria-label="Bannière principale">
+      <!-- Texte de bienvenue -->
+      <div class="absolute inset-0 flex items-center justify-center z-10">
+        <div class="container mx-auto text-center md:text-left px-6 md:px-12">
+          <div data-aos="fade-up" data-aos-duration="1000" class="max-w-3xl">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">Ensemble pour vaincre l'échec scolaire</h2>
+            <p class="mt-6 text-xl text-white/90 max-w-2xl">
+              Engagés à offrir une éducation inclusive, nous accompagnons les jeunes et renforçons les familles pour un avenir meilleur.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start mt-8 gap-4">
+              <a href="./config/publicblog.php" class="bg-white text-[#00558a] font-bold py-3 px-6 rounded-lg transition hover:bg-blue-50 shadow-lg">Notre blog</a>
+              <a href="contact.html" class="bg-[#00558a] text-white font-bold py-3 px-6 rounded-lg border-2 border-white transition hover:bg-blue-700 shadow-lg">Nous soutenir</a>
+            </div>
+
+            <!-- Social icons -->
+            <div class="flex justify-center md:justify-start space-x-4 mt-8">
+              <a href="https://www.facebook.com/profile.php?id=100079511236105" class="social-icon bg-[#00558a]/90 p-3 rounded-full text-white shadow hover:bg-[#00558a] transition duration-300">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://wa.me/22997328519" class="social-icon bg-green-500/90 p-3 rounded-full text-white shadow hover:bg-green-600 transition duration-300">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="mailto:Ongnotredamedesvictoires@gmail.com" class="social-icon bg-yellow-500/90 p-3 rounded-full text-white shadow hover:bg-yellow-600 transition duration-300">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images carrousel -->
+      <div class="relative splide__track h-full">
+        <ul class="splide__list h-full">
+          <li class="splide__slide"><img src="asset/1.jpg" alt="Enfants souriants bénéficiant des programmes de l'ONG" class="w-full h-full object-cover"></li>
+          <li class="splide__slide"><img src="asset/5.jpg" alt="Atelier de sensibilisation communautaire" class="w-full h-full object-cover"></li>
+          <li class="splide__slide"><img src="asset/3.jpg" alt="Activités éducatives avec les enfants" class="w-full h-full object-cover"></li>
+          <li class="splide__slide"><img src="asset/4.jpg" alt="Programme de soutien scolaire" class="w-full h-full object-cover"></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-0 right-0 flex justify-center z-20 animate-bounce">
+      <a href="#qui-sommes-nous" class="text-white bg-[#00558a]/50 p-3 rounded-full hover:bg-[#00558a] transition">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION À PROPOS -->
+  <section id="qui-sommes-nous" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-5/12" data-aos="fade-right">
+          <img class="rounded-xl shadow-xl w-full h-auto" src="./asset/ong/ab1.jpg" alt="Membres de l'ONG Notre Dame des Victoires travaillant avec des enfants" loading="lazy">
+        </div>
+        <div class="lg:w-7/12" data-aos="fade-left">
+          <h2 class="text-3xl font-bold text-[#00558a] mb-6">Notre Dame des Victoires</h2>
+          <div class="w-20 h-1 bg-pink-400 mb-6"></div>
+          <p class="text-lg text-gray-700 mb-6">
+            Notre Dame des Victoires est une organisation non gouvernementale dédiée à la promotion de l'éducation,
+            du bien-être et de la santé des communautés. Fondée sur des valeurs de compassion, d'engagement et
+            d'inclusion, nous travaillons sans relâche pour offrir des opportunités à ceux qui en ont le plus besoin.
+          </p>
+          <p class="text-lg text-gray-700 mb-8">
+            Face à l'augmentation préoccupante des fléaux sociaux en milieu scolaire, des professionnels de l'éducation ont uni leurs forces pour créer l'ONG NDV. Notre mission est de soutenir les élèves en difficulté scolaire tout en favorisant la reconstruction des liens familiaux.
+          </p>
+          <a href="./config/publicblog.php" class="inline-block bg-[#00558a] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition">
+            En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION ET OBJECTIFS -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-[#00558a]">Notre Vision et Nos Objectifs</h2>
+        <div class="w-24 h-1 bg-pink-400 mx-auto my-6"></div>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          Notre vision est de VAINCRE L'ÉCHEC SCOLAIRE et de reconstruire les liens familiaux pour une société plus équilibrée.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Objectif 1 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-blue-100 text-[#00558a] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-school text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Accompagner les apprenants</h3>
+          <p class="text-gray-600">
+            Soutenir les élèves présentant des comportements inappropriés susceptibles de nuire à leurs résultats scolaires.
+          </p>
+        </div>
+
+        <!-- Objectif 2 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-blue-100 text-[#00558a] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-home text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Promouvoir l'éducation familiale</h3>
+          <p class="text-gray-600">
+            Organiser des séminaires pratiques sur des méthodes éducatives adaptées pour renforcer les liens familiaux.
+          </p>
+        </div>
+
+        <!-- Objectif 3 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-blue-100 text-[#00558a] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-hand-holding-heart text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Assister les enfants vulnérables</h3>
+          <p class="text-gray-600">
+            Offrir ressources et soutien adaptés aux orphelins et enfants en situation de précarité pour favoriser leur développement.
+          </p>
+        </div>
+
+        <!-- Objectif 4 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-blue-100 text-[#00558a] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Créer un centre éducatif</h3>
+          <p class="text-gray-600">
+            Établir un centre d'éducation et de restauration familiale pour la réconciliation et le renforcement des liens.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNIÈRE D'IMPACT -->
+  <section class="py-16 bg-[#00558a] text-white">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-4xl font-bold mb-2">250+</h3>
+          <p class="text-xl opacity-80">Élèves accompagnés</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-4xl font-bold mb-2">15+</h3>
+          <p class="text-xl opacity-80">Ateliers organisés</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-4xl font-bold mb-2">80%</h3>
+          <p class="text-xl opacity-80">De taux de réussite</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-[#00558a]">Nos Projets</h2>
+        <div class="w-20 h-1 bg-pink-400 mx-auto my-6"></div>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          L'ONG Notre Dame des Victoires mène des projets pour soutenir les élèves, renforcer les familles et aider les
+          enfants vulnérables, tout en promouvant l'éducation et le développement social.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Projet 1 -->
+        <div class="card-project bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative overflow-hidden">
+            <img class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" src="./asset/ong/p2.jpg" alt="Ateliers de sensibilisation communautaire">
+            <div class="absolute top-4 right-4 bg-[#00558a] text-white text-xs font-bold px-3 py-1 rounded-full">En cours</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Ateliers de sensibilisation communautaire</h3>
+            <p class="text-gray-600 mb-6">
+              Engager les communautés locales pour renforcer la compréhension et le soutien familial à travers des sessions interactives et participatives.
+            </p>
+            <a href="./config/publicblog.php" class="inline-block bg-lime-300 text-teal-900 font-semibold px-4 py-2 rounded-lg hover:bg-lime-400 transition">
+              Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="card-project bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative overflow-hidden">
+            <img class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" src="./asset/ong/p3.jpg" alt="Programmes d'éducation sexuelle">
+            <div class="absolute top-4 right-4 bg-[#00558a] text-white text-xs font-bold px-3 py-1 rounded-full">En cours</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Programmes d'éducation sexuelle</h3>
+            <p class="text-gray-600 mb-6">
+              Sensibiliser les jeunes sur la santé sexuelle pour prévenir les grossesses précoces et promouvoir des comportements responsables.
+            </p>
+            <a href="./config/publicblog.php" class="inline-block bg-lime-300 text-teal-900 font-semibold px-4 py-2 rounded-lg hover:bg-lime-400 transition">
+              Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="card-project bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+          <div class="relative overflow-hidden">
+            <img class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" src="./asset/ong/p4.jpg" alt="Conseils et support individualisés">
+            <div class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">Nouveau</div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Conseils et support individualisés</h3>
+            <p class="text-gray-600 mb-6">
+              Offrir un accompagnement personnalisé aux enfants pour résoudre des problématiques spécifiques et favoriser leur épanouissement.
+            </p>
+            <a href="./config/publicblog.php" class="inline-block bg-lime-300 text-teal-900 font-semibold px-4 py-2 rounded-lg hover:bg-lime-400 transition">
+              Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Evènements -->
+    <section id="events" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl font-bold text-[#00558a]">Nos Evènements</h2>
+          <div class="w-20 h-1 bg-pink-400 mx-auto my-6"></div>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            Le 8 février 2025, l’ONG Notre-Dame des Victoires a 
+            organisé une soirée de gala mémorable à la Salle des Fêtes 
+            3M à Dekoungbé. Elle a connu trois grandes phases : une 
+            conférence, un panel et des sketches. Cet événement a réuni 
+            plusieurs personnalités de divers ordres, des invités et des 
+            participants volontaires qui ont à cœur la vie familiale et la 
+            réussite des enfants, des invités spéciaux, ainsi qu’une 
+            audience enthousiaste.
+          </p>
+        </div>
+  
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Projet 1 -->
+          <div class="card-project bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative overflow-hidden">
+              <img class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" src="./asset/ong/2.jpg" alt="Ateliers de sensibilisation communautaire">
+              <!-- <div class="absolute top-4 right-4 bg-[#00558a] text-white text-xs font-bold px-3 py-1 rounded-full">En cours</div> -->
+            </div>
+            <!-- <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Ateliers de sensibilisation communautaire</h3>
+              <p class="text-gray-600 mb-6">
+                Engager les communautés locales pour renforcer la compréhension et le soutien familial à travers des sessions interactives et participatives.
+              </p>
+              <a href="./config/publicblog.php" class="inline-block bg-lime-300 text-teal-900 font-semibold px-4 py-2 rounded-lg hover:bg-lime-400 transition">
+                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div> -->
+          </div>
+  
+          <!-- Projet 2 -->
+          <div class="card-project bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative overflow-hidden">
+              <img class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" src="./asset/ong/3.jpg" alt="Programmes d'éducation sexuelle">
+              <!-- <div class="absolute top-4 right-4 bg-[#00558a] text-white text-xs font-bold px-3 py-1 rounded-full">En cours</div> -->
+            </div>
+            <!-- <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Programmes d'éducation sexuelle</h3>
+              <p class="text-gray-600 mb-6">
+                Sensibiliser les jeunes sur la santé sexuelle pour prévenir les grossesses précoces et promouvoir des comportements responsables.
+              </p>
+              <a href="./config/publicblog.php" class="inline-block bg-lime-300 text-teal-900 font-semibold px-4 py-2 rounded-lg hover:bg-lime-400 transition">
+                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div> -->
+          </div>
+  
+          <!-- Projet 3 -->
+          <div class="card-project bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative overflow-hidden">
+              <img class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" src="./asset/ong/1.jpg" alt="Conseils et support individualisés">
+              <!-- <div class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">Nouveau</div> -->
+            </div>
+            <!-- <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Conseils et support individualisés</h3>
+              <p class="text-gray-600 mb-6">
+                Offrir un accompagnement personnalisé aux enfants pour résoudre des problématiques spécifiques et favoriser leur épanouissement.
+              </p>
+              <a href="./config/publicblog.php" class="inline-block bg-lime-300 text-teal-900 font-semibold px-4 py-2 rounded-lg hover:bg-lime-400 transition">
+                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div> -->
+          </div>
+        
+            
+          <!-- Projet 3 -->
+          <div class="card-project bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative overflow-hidden">
+              <img class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" src="./asset/ong/4.jpg" alt="Conseils et support individualisés">
+              <!-- <div class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">Nouveau</div> -->
+            </div>
+            <!-- <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Conseils et support individualisés</h3>
+              <p class="text-gray-600 mb-6">
+                Offrir un accompagnement personnalisé aux enfants pour résoudre des problématiques spécifiques et favoriser leur épanouissement.
+              </p>
+              <a href="./config/publicblog.php" class="inline-block bg-lime-300 text-teal-900 font-semibold px-4 py-2 rounded-lg hover:bg-lime-400 transition">
+                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div> -->
+          </div>
+          
+          <!-- Projet 3 -->
+          <div class="card-project bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative overflow-hidden">
+              <img class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" src="./asset/ong/5.jpg" alt="Conseils et support individualisés">
+              <!-- <div class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">Nouveau</div> -->
+            </div>
+            <!-- <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Conseils et support individualisés</h3>
+              <p class="text-gray-600 mb-6">
+                Offrir un accompagnement personnalisé aux enfants pour résoudre des problématiques spécifiques et favoriser leur épanouissement.
+              </p>
+              <a href="./config/publicblog.php" class="inline-block bg-lime-300 text-teal-900 font-semibold px-4 py-2 rounded-lg hover:bg-lime-400 transition">
+                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div> -->
+          </div>
+          
+          <!-- Projet 3 -->
+          <div class="card-project bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative overflow-hidden">
+              <img class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110" src="./asset/ong/6.jpg" alt="Conseils et support individualisés">
+              <!-- <div class="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">Nouveau</div> -->
+            </div>
+            <!-- <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Conseils et support individualisés</h3>
+              <p class="text-gray-600 mb-6">
+                Offrir un accompagnement personnalisé aux enfants pour résoudre des problématiques spécifiques et favoriser leur épanouissement.
+              </p>
+              <a href="./config/publicblog.php" class="inline-block bg-lime-300 text-teal-900 font-semibold px-4 py-2 rounded-lg hover:bg-lime-400 transition">
+                Voir le projet <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div> -->
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+  <!-- NOTRE ENGAGEMENT -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-[#00558a]">Notre Engagement</h2>
+        <div class="w-20 h-1 bg-pink-400 mx-auto my-6"></div>
+        <h3 class="text-xl text-pink-500 font-semibold mb-4">Une Conscience Éducative</h3>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          À travers nos actions, nous contribuons activement au développement du Bénin, en impactant positivement 
+          le système éducatif et les structures familiales, bases fondamentales de toute société prospère.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Engagement 1 -->
+        <div class="p-8 bg-gray-50 rounded-xl text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="inline-block p-4 bg-teal-100 text-teal-600 rounded-full mb-6">
+            <i class="fas fa-graduation-cap text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Soutenir les élèves en difficulté scolaire</h3>
+          <p class="text-gray-600">
+            Nous accompagnons les élèves en difficulté pour les aider à surmonter leurs obstacles et réussir leur parcours éducatif.
+          </p>
+        </div>
+
+        <!-- Engagement 2 -->
+        <div class="p-8 bg-gray-50 rounded-xl text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="inline-block p-4 bg-teal-100 text-teal-600 rounded-full mb-6">
+            <i class="fas fa-users text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Favoriser la reconstruction des liens familiaux</h3>
+          <p class="text-gray-600">
+            Nous aidons les familles à recréer des relations harmonieuses grâce à des ateliers et des espaces d'écoute.
+          </p>
+        </div>
+
+        <!-- Engagement 3 -->
+        <div class="p-8 bg-gray-50 rounded-xl text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+          <div class="inline-block p-4 bg-teal-100 text-teal-600 rounded-full mb-6">
+            <i class="fas fa-hands-helping text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Contribuer à une société plus équilibrée</h3>
+          <p class="text-gray-600">
+            Nos actions visent à bâtir une société solidaire, basée sur l'éducation et des valeurs partagées.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION DON -->
+  <section class="py-16 bg-gradient-to-r from-blue-800 to-blue-600 text-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row items-center">
+        <div class="lg:w-1/2 mb-8 lg:mb-0" data-aos="fade-right">
+          <img src="https://img.freepik.com/free-photo/volunteers-holding-boxes-containing-donations-charity_23-2149230562.jpg?t=st=1733200764~exp=1733204364~hmac=2ac3d9e225abb04153050cb9433dd49ee380f1b878a7ace6b2f5040744740738&w=1060" 
+               alt="Faites un don" class="rounded-xl shadow-xl w-full h-auto">
+        </div>
+        <div class="lg:w-1/2 lg:pl-12" data-aos="fade-left">
+          <h2 class="text-3xl font-bold mb-6">Faites un don, changez des vies</h2>
+          <div class="w-20 h-1 bg-white/50 mb-6"></div>
+          <p class="text-lg mb-8 text-white/90">
+            Votre contribution permet de soutenir nos programmes et d'apporter une aide précieuse à ceux qui en ont
+            besoin. Chaque don compte et fait une réelle différence dans la vie des enfants et des familles que nous accompagnons.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="contact.html" class="bg-white text-blue-700 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 transition shadow-lg">
+              Faire un don maintenant
+            </a>
+            <a href="contact.html" class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition">
+              Devenir partenaire
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-[#00558a] mb-4">Restez informé de nos actions</h2>
+        <p class="text-gray-700 mb-8">
+          Inscrivez-vous à notre newsletter pour recevoir les dernières actualités et informations sur nos projets.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+          <input type="email" placeholder="Votre adresse email" class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button type="submit" class="bg-[#00558a] text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition">
+            S'inscrire
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-[#00558a]">Témoignages</h2>
+        <div class="w-20 h-1 bg-pink-400 mx-auto my-6"></div>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          Découvrez l'impact de notre travail à travers les témoignages de ceux que nous avons aidés.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Témoignage 1 -->
+<!-- TÉMOIGNAGES (continuation) -->
+<div class="bg-gray-50 p-6 rounded-xl shadow-md" data-aos="fade-left" data-aos-delay="100">
+    <div class="flex items-center mb-4">
+      <img src="/api/placeholder/60/60" alt="Photo de profil" class="w-12 h-12 rounded-full object-cover">
+      <div class="ml-4">
+        <h4 class="font-bold text-gray-800">Mariam Konaté</h4>
+        <p class="text-sm text-gray-500">Mère de famille</p>
+      </div>
+    </div>
+    <p class="text-gray-600 italic mb-4">
+      "Grâce aux ateliers de l'ONG Notre Dame des Victoires, j'ai appris à mieux communiquer avec mes enfants. Cela a considérablement amélioré notre relation et leur performance scolaire."
+    </p>
+    <div class="text-yellow-400">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </div>
+  </div>
+  
+  <!-- Témoignage 2 -->
+  <div class="bg-gray-50 p-6 rounded-xl shadow-md" data-aos="fade-left" data-aos-delay="200">
+    <div class="flex items-center mb-4">
+      <img src="/api/placeholder/60/60" alt="Photo de profil" class="w-12 h-12 rounded-full object-cover">
+      <div class="ml-4">
+        <h4 class="font-bold text-gray-800">Pascal Adekambi</h4>
+        <p class="text-sm text-gray-500">Enseignant</p>
+      </div>
+    </div>
+    <p class="text-gray-600 italic mb-4">
+      "J'ai vu une transformation remarquable chez les élèves qui ont participé aux programmes de l'ONG. Ils sont plus engagés, disciplinés et leurs résultats se sont nettement améliorés."
+    </p>
+    <div class="text-yellow-400">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+    </div>
+  </div>
+  
+  <!-- Témoignage 3 -->
+  <div class="bg-gray-50 p-6 rounded-xl shadow-md" data-aos="fade-left" data-aos-delay="300">
+    <div class="flex items-center mb-4">
+      <img src="/api/placeholder/60/60" alt="Photo de profil" class="w-12 h-12 rounded-full object-cover">
+      <div class="ml-4">
+        <h4 class="font-bold text-gray-800">Sophie Gnambode</h4>
+        <p class="text-sm text-gray-500">Élève, 16 ans</p>
+      </div>
+    </div>
+    <p class="text-gray-600 italic mb-4">
+      "Les séances de soutien scolaire m'ont beaucoup aidée. J'étais sur le point d'abandonner l'école, mais l'ONG m'a redonné confiance en moi. Maintenant, j'ai de bons résultats et de grands projets pour mon avenir."
+    </p>
+    <div class="text-yellow-400">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </div>
+  </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- PARTENAIRES -->
+    <!-- <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl font-bold text-[#00558a]">Nos Partenaires</h2>
+          <div class="w-20 h-1 bg-pink-400 mx-auto my-6"></div>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            Nous sommes reconnaissants envers ces organisations qui soutiennent notre mission.
+          </p>
+        </div>
+  
+        <div class="flex flex-wrap justify-center items-center gap-8">
+          <div class="grayscale hover:grayscale-0 transition" data-aos="zoom-in" data-aos-delay="100">
+            <img src="/api/placeholder/150/80" alt="Logo partenaire" class="h-16">
+          </div>
+          <div class="grayscale hover:grayscale-0 transition" data-aos="zoom-in" data-aos-delay="200">
+            <img src="/api/placeholder/150/80" alt="Logo partenaire" class="h-16">
+          </div>
+          <div class="grayscale hover:grayscale-0 transition" data-aos="zoom-in" data-aos-delay="300">
+            <img src="/api/placeholder/150/80" alt="Logo partenaire" class="h-16">
+          </div>
+          <div class="grayscale hover:grayscale-0 transition" data-aos="zoom-in" data-aos-delay="400">
+            <img src="/api/placeholder/150/80" alt="Logo partenaire" class="h-16">
+          </div>
+        </div>
+      </div>
+    </section> -->
+  
+    <!-- FOOTER -->
+    <footer class="bg-[#00558a] text-white pt-12 pb-6">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <!-- À propos -->
+          <div>
+            <div class="flex items-center mb-4">
+              <img src="./asset/logo-NDV.png" alt="Logo ONG Notre Dame des Victoires" class="bg-white h-12 rounded-full">
+              <div class="ml-3">
+                <h3 class="font-bold">Notre Dame des Victoires</h3>
+                <p class="text-xs text-white/80">Vaincre l'échec scolaire</p>
+              </div>
+            </div>
+            <p class="text-white/80 mb-4">
+              Une organisation dédiée à l'éducation, au bien-être et à la santé des communautés au Bénin.
+            </p>
+            <div class="flex space-x-4">
+              <a href="https://www.facebook.com/profile.php?id=100079511236105" class="hover:text-blue-200 transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://wa.me/22997328519" class="hover:text-blue-200 transition">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="mailto:Ongnotredamedesvictoires@gmail.com" class="hover:text-blue-200 transition">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+  
+          <!-- Liens rapides -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+            <ul class="space-y-2">
+              <li><a href="#accueil" class="text-white/80 hover:text-white transition">Accueil</a></li>
+              <li><a href="#qui-sommes-nous" class="text-white/80 hover:text-white transition">Qui sommes-nous</a></li>
+              <li><a href="#projets" class="text-white/80 hover:text-white transition">Nos projets</a></li>
+              <li><a href="./config/publicblog.php" class="text-white/80 hover:text-white transition">Blog</a></li>
+              <li><a href="contact.html" class="text-white/80 hover:text-white transition">Contact</a></li>
+            </ul>
+          </div>
+  
+          <!-- Contact -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                <span class="text-white/80">Cotonou, Bénin</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone mt-1 mr-3"></i>
+                <span class="text-white/80">+229 97 32 85 19</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-3"></i>
+                <span class="text-white/80">Ongnotredamedesvictoires@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- Faire un don -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Nous soutenir</h3>
+            <p class="text-white/80 mb-4">
+              Soutenez nos actions et aidez-nous à faire une différence dans la vie des enfants et des familles.
+            </p>
+            <a href="contact.html" class="inline-block bg-white text-[#00558a] font-semibold py-2 px-4 rounded-lg hover:bg-blue-50 transition">
+              Faire un don
+            </a>
+          </div>
+        </div>
+  
+        <div class="border-t border-white/20 pt-6 text-center text-white/60 text-sm">
+          <p>&copy; 2023-2025 ONG Notre Dame des Victoires. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+  
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true
+      });
+  
+      // Initialize Splide carousel
+      document.addEventListener('DOMContentLoaded', function() {
+        new Splide('.splide', {
+          type: 'fade',
+          rewind: true,
+          autoplay: true,
+          interval: 5000,
+          arrows: false,
+          pagination: true
+        }).mount();
+  
+        // Mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+  
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+  
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        });
+  
+        // Handle menu links for smooth scrolling
+        const menuLinks = document.querySelectorAll('a[href^="#"]');
+        menuLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: 'smooth'
+              });
+            }
+            // Close mobile menu if open
+            if (!mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+  </html>
