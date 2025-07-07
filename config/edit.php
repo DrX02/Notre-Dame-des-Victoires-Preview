@@ -72,7 +72,7 @@ $post = $stmt->fetch(PDO::FETCH_ASSOC);
       </div>
       
       <div class="flex items-center justify-center">
-        <a href="index.php" class="text-gray-500 font-medium py-2 px-6 mr-4 hover:text-gray-700 transition">Annuler</a>
+        <a href="./blog.php" class="text-gray-500 font-medium py-2 px-6 mr-4 hover:text-gray-700 transition">Annuler</a>
         <button type="submit" class="submit-button text-white font-medium py-3 px-8">
           Enregistrer
         </button>
